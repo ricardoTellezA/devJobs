@@ -1,0 +1,47 @@
+{
+  "name": "devjobs",
+  "version": "1.0.0",
+  "description": "Porta DevJobs con NodeJs, Handlebars Mongoose ",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index",
+    "desarrollo": "concurrently \"npm run dev\" \"npm run watch \" ",
+    "start": "node ./index.js",
+    "watch": "webpack -w --mode development"
+  },
+  "author": "Ricardo",
+  "license": "ISC",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.5",
+    "axios": "^0.21.4",
+    "bcrypt": "^5.0.1",
+    "concurrently": "^6.2.1",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.5.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "express-session": "^1.17.2",
+    "express-validator": "^5.3.1",
+    "handlebars": "^4.7.7",
+    "http-errors": "^1.8.0",
+    "mongoose": "^5.13.7",
+    "multer": "^1.4.3",
+    "nodemailer": "^6.6.5",
+    "nodemailer-express-handlebars": "^4.0.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "shortid": "^2.2.16",
+    "slug": "^5.1.0",
+    "sweetalert2": "^11.1.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-loader": "^8.2.2",
+    "nodemon": "^2.0.12",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+  }
+}
