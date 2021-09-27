@@ -1,4 +1,4 @@
-// const moongose = require('mongoose');
+const moongose = require('mongoose');
 require('./config/db');
 
 const express = require('express');
@@ -20,14 +20,15 @@ require('dotenv').config({ path: 'variables.env' });
 
 const app = express();
 
+//validacion de campo con express-validator
+
+app.use(expressValidator());
+
 //HABILITAR BODY-PARSER
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true,
 }));
-//validacion de campo con express-validator
-
-app.use(expressValidator());
 
 //HABLILITAR HANDLEBARS COMO VIEW
 app.engine('handlebars',
