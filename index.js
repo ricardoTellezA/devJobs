@@ -1,4 +1,4 @@
-const moongose = require('mongoose');
+// const moongose = require('mongoose');
 require('./config/db');
 
 const express = require('express');
@@ -92,4 +92,4 @@ const port = process.env.PORT;
 
 app.listen(port,host, () => {
     console.log('El Servidor esta corriendo');
-});
+}); 
