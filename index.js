@@ -89,7 +89,7 @@ app.use((error, req, res, next) => {
 
 //PUERTO DE HEROKU
 const host = '0.0.0.0';
-const port = process.env.PORT;
+const port = process.env.PORT || 4000;
 
 app.listen(port,host, () => {
     console.log('El Servidor esta corriendo');
