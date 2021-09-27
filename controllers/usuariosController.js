@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Usuarios = mongoose.model('Usuarios');
 const multer = require('multer');
-const shortId = require('shortId');
+const shortid = require('shortid');
 
 exports.subirImagen = (req, res, next) => {
     upload(req, res, function (error) {
@@ -42,7 +42,7 @@ const configuracionMulter = {
         },
         filename: (req, file, cb) => {
             const extension = file.mimetype.split('/')[1];
-            cb(null, `${shortId.generate()}.${extension}`);
+            cb(null, `${shortid.generate()}.${extension}`);
         }
 
     }),
